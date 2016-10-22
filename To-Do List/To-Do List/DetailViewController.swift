@@ -44,6 +44,24 @@ class DetailViewController: UIViewController {
         self.navigationController?.popToRootViewController(animated: true)
     }
     
+    @IBAction func completeItem(_ sender: AnyObject) {
+        
+        let userDefaults:UserDefaults = UserDefaults.standard
+        let completedList:NSMutableArray? = userDefaults.object(forKey: "completedList") as? NSMutableArray
+        let mutableCompletedList:NSMutableArray = NSMutableArray()
+        
+        let timestamp:NSDate = NSDate()
+        if((completedList) != nil){
+            for ts:Any in completedList! {
+                mutableCompletedList.add(ts as! NSDate)
+            }
+        }
+        mutableCompletedList.add(timestamp as! NSDate)
+        userDefaults.removeObject(forKey: "completedList")
+        userDefaults.set(mutableCompletedList, forKey: "completedList")
+        userDefaults.synchronize()
+        self.deleteItem(self)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

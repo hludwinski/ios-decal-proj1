@@ -16,6 +16,7 @@
 		74A208AD1DB40D53006705FD /* MasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A208AC1DB40D53006705FD /* MasterTableViewController.swift */; };
 		74A208AF1DB40DD5006705FD /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A208AE1DB40DD5006705FD /* AddViewController.swift */; };
 		74A208B11DB40E0A006705FD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A208B01DB40E0A006705FD /* DetailViewController.swift */; };
+		74BD8D281DBC0DD9002344F0 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BD8D271DBC0DD9002344F0 /* StatsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		74A208AC1DB40D53006705FD /* MasterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterTableViewController.swift; sourceTree = "<group>"; };
 		74A208AE1DB40DD5006705FD /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		74A208B01DB40E0A006705FD /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		74BD8D271DBC0DD9002344F0 /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				74A208AC1DB40D53006705FD /* MasterTableViewController.swift */,
 				74A208AE1DB40DD5006705FD /* AddViewController.swift */,
 				74A208B01DB40E0A006705FD /* DetailViewController.swift */,
+				74BD8D271DBC0DD9002344F0 /* StatsViewController.swift */,
 				74A208821DB404E3006705FD /* Main.storyboard */,
 				74A208851DB404E3006705FD /* Assets.xcassets */,
 				74A208871DB404E3006705FD /* LaunchScreen.storyboard */,
@@ -268,6 +271,7 @@
 				74A208AD1DB40D53006705FD /* MasterTableViewController.swift in Sources */,
 				74A208B11DB40E0A006705FD /* DetailViewController.swift in Sources */,
 				74A208AF1DB40DD5006705FD /* AddViewController.swift in Sources */,
+				74BD8D281DBC0DD9002344F0 /* StatsViewController.swift in Sources */,
 				74A2087F1DB404E3006705FD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,6 +519,7 @@
 				74A208A51DB404E3006705FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74A208A61DB404E3006705FD /* Build configuration list for PBXNativeTarget "To-Do ListTests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +528,7 @@
 				74A208A81DB404E3006705FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74A208A91DB404E3006705FD /* Build configuration list for PBXNativeTarget "To-Do ListUITests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +537,7 @@
 				74A208AB1DB404E3006705FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="snT-kl-AAc" id="Ve9-u9-HuQ">
-                                    <frame key="frameInset" width="342" height="44"/>
+                                    <frame key="frameInset" width="342" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -33,7 +33,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="To-Do" id="vzr-SK-GmZ">
-                        <barButtonItem key="leftBarButtonItem" title="Stats" id="nML-Tt-8VI"/>
+                        <barButtonItem key="leftBarButtonItem" title="Stats" id="nML-Tt-8VI">
+                            <connections>
+                                <segue destination="Z4p-lJ-pG4" kind="push" id="536-kG-dsT"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="OQ4-9Q-kQy">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="push" identifier="showAddVC" id="VP2-Y7-MHY"/>
@@ -43,7 +47,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iz2-d1-4cb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-20" y="114"/>
+            <point key="canvasLocation" x="-20" y="113.79310344827587"/>
         </scene>
         <!--New Item-->
         <scene sceneID="tne-QT-ifu">
@@ -104,6 +108,43 @@
             </objects>
             <point key="canvasLocation" x="757" y="-78"/>
         </scene>
+        <!--Tasks Completed Today-->
+        <scene sceneID="RKa-lF-lN4">
+            <objects>
+                <viewController id="Z4p-lJ-pG4" customClass="StatsViewController" customModule="To_Do_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PY3-8t-lgd"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lai-Ii-snw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SXs-ce-PEf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="4sc-Y6-7Yt">
+                                <frame key="frameInset" minX="125" minY="95" width="124" height="104"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="0">
+                                        <attributes>
+                                            <font key="NSFont" size="48" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tasks Completed Today" id="pZL-0o-HfA"/>
+                    <connections>
+                        <outlet property="completeCountLabel" destination="4sc-Y6-7Yt" id="M3L-Bv-k7j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DCm-RU-d5G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20" y="856"/>
+        </scene>
         <!--Detail View Controller-->
         <scene sceneID="zu5-bJ-s49">
             <objects>
@@ -144,6 +185,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yvu-Tv-oCo">
+                                <frame key="frameInset" minX="111" minY="318" width="153" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Mark as Completed"/>
+                                <connections>
+                                    <action selector="completeItem:" destination="81T-Jk-umi" eventType="touchUpInside" id="qld-wJ-XQl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
